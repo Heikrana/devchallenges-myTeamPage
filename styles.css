@@ -1,0 +1,156 @@
+body {
+	box-sizing: border-box;
+}
+
+/* Header properties */
+
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 110px 350px;
+	gap: 215px;
+}
+
+header > h1 {
+	font: 700 36px "PT Serif", serif;
+	margin: 0;
+}
+
+.header-content > h3 {
+	font: 600 18px "Poppins", sans-serif;
+	margin: 0;
+}
+
+.header-content > p {
+	font: 400 18px "Poppins", sans-serif;
+	max-width: 440px;
+}
+
+/* Main body */
+
+.body-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin: auto 280px 150px 280px;
+}
+
+.body-content img {
+	max-width: 280px;
+	height: auto;
+}
+
+.person {
+	display: flex;
+	justify-content: center;
+}
+
+.person-name {
+	font: 600 18px "Poppins", sans-serif;
+}
+
+.person > p {
+	font: 400 12px "PT Serif", serif;
+	writing-mode: vertical-lr;
+}
+
+/* Footer properties */
+
+footer {
+	font: 500 14px "Montserrat", sans-serif;
+	color: #a9a9a9;
+	text-align: center;
+}
+
+footer a {
+	color: #a9a9a9;
+	font-weight: bold;
+}
+
+@media screen and (min-width: 900px) {
+	.person:nth-child(n + 4) {
+		margin-top: 20px;
+	}
+
+	.person:nth-child(3n + 2) {
+		margin-top: 120px;
+	}
+}
+
+/* Tablet View */
+
+@media screen and (max-width: 900px) {
+	header {
+		margin: 60px 110px;
+		gap: 60px;
+	}
+
+	.header-content > p {
+		font: 400 14px "Poppins", sans-serif;
+		margin-top: 10px;
+		max-width: 330px;
+	}
+
+	.body-content {
+		margin: 40px 50px 100px 70px;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 5px;
+	}
+
+	.body-content img {
+		max-width: 150px;
+	}
+
+	.person:nth-child(3n + 2) {
+		margin-top: 60px;
+	}
+
+	.person-name {
+		font: 600 16px "Poppins", sans-serif;
+	}
+
+	.person > p {
+		font: 400 12px "PT Serif", serif;
+	}
+}
+
+/* Mobile View */
+
+@media screen and (max-width: 600px) {
+	header {
+		flex-direction: column;
+		margin: 70px auto auto 12px;
+		gap: 38px;
+	}
+
+	.header-content > p {
+		font: 400 14px "Poppins", sans-serif;
+		margin-top: 10px;
+		max-width: 330px;
+	}
+
+	.body-content {
+		margin: 40px auto 130px auto;
+		grid-template-columns: 1fr 1fr;
+		gap: 5px;
+	}
+
+	.body-content img {
+		max-width: 135px;
+	}
+
+	.person:nth-child(3n + 2) {
+		margin-top: 0; /* over-write tablet property */
+	}
+
+	.person:nth-child(2n) {
+		margin-top: 40px;
+	}
+
+	.person-name {
+		font: 600 14px "Poppins", sans-serif;
+	}
+
+	.person > p {
+		font: 400 10px "PT Serif", serif;
+	}
+}
